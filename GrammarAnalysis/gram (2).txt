@@ -1,0 +1,102 @@
+Sprime:<S>
+<S>:<R> identifier ( ) { <B> returnStatement }
+returnStatement:RETURN <FH> ;
+returnStatement:RETURN
+<FH>:NUM
+<R>:INT
+<R>:VOID
+<B>:<BS> <B>
+<B>:<BS>
+<BS>:<D>
+<BS>:<F>
+<BS>:loopStatement
+<BS>:<W>
+<BS>:<Y>
+<BS>:<Z> ;
+<Z>:identifier <A> ++
+<Z>:identifier ++
+<Z>:identifier <A> --
+<Z>:identifier --
+<D>:INT identifier <A> <DF> <DS> ;
+<D>:INT identifier <A> <DF> ;
+<D>:INT identifier <DF> <DS> ;
+<D>:INT identifier <DF> ;
+<D>:INT identifier <A> <DS> ;
+<D>:INT identifier <A> ;
+<D>:INT identifier <DS> ;
+<D>:INT identifier ;
+<F>:identifier <A> <DF> ;
+<F>:identifier <DF> ;
+<A>:[ identifier ]
+<A>:[ NUM ]
+<A>:[ <M> ]
+<DF>:= <M>
+<DF>:= { <NS> }
+<NS>:NUM
+<NS>:NUM <CN>
+<CN>:, NUM <CN>
+<CN>:, NUM
+<DS>:, identifier <A> <DF> <DS>
+<DS>:, identifier <DF> <DS>
+<DS>:, identifier <A> <DS>
+<DS>:, identifier <DS>
+<DS>:, identifier <A> <DF>
+<DS>:, identifier <DF>
+<DS>:, identifier <A>
+<DS>:, identifier
+<M>:<MC> <MS> <MF>
+<M>:<MC> <MS>
+<M>:<MC> <MF>
+<M>:<MC>
+<MF>:+ <M>
+<MF>:- <M>
+<MS>:* <MC> <MS>
+<MS>:/ <MC> <MS>
+<MS>:* <MC>
+<MS>:/ <MC>
+<MC>:( <M> )
+<MC>:NUM
+<MC>:string
+<MC>:identifier <A>
+<MC>:identifier
+loopStatement:<FORX>
+loopStatement:<WHILEX>
+<FORX>:FOR ( <FOD> <FOT> <FOF> ) { <B> }
+<FORX>:FOR ( <FOD> <FOT> ) { <B> }
+<FOD>:;
+<FOD>:<F>
+<FOT>:<T> ;
+<FOT>:;
+<FOF>:identifier <A> = <M>
+<FOF>:identifier = <M>
+<FOF>:<Z>
+<T>:( <M> <GK> <M> <TS> )
+<T>:( <M> <GK> <M> )
+<T>:<M> <GK> <M>
+<TS>:&& <T>
+<TS>:|| <T>
+<GK>:!=
+<GK>:==
+<GK>:>=
+<GK>:<=
+<GK>:>
+<GK>:<
+<WHILEX>:WHILE <T> { <B> }
+<W>:<IF> <IF_E>
+<W>:<IF>
+<IF>:IF <T> { <B> }
+<IF_E>:<ELSE>
+<ELSE>:ELSE <ELSE_E>
+<ELSE_E>:<IF> <IF_E>
+<ELSE_E>:<IF>
+<ELSE_E>:{ <B> }
+<Y>:printf ( string , <PRLI> ) ;
+<Y>:printf ( string ) ;
+<Y>:scanf ( string , <SCLI> ) ;
+<SCLI>:<SCA>
+<SCLI>:<SCLI> , <SCA>
+<SCA>:& <MC>
+<SCA>:<MC>
+<PRLI>:<PRA>
+<PRLI>:<PRLI> , <PRA>
+<PRA>:<M>

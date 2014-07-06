@@ -1,0 +1,624 @@
+declaration-specifiers: int 44
+declarator: identifier 49
+declarator: declarator [ digit ] 50
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer 55
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+initializer: { initializer-list } 52
+init-declarator: declarator = initializer 48
+init-declarator-list: init-declarator 45
+declaration: declaration-specifiers init-declarator-list ; 43
+block-item: declaration 65
+block-item-list: block-item 63
+declaration-specifiers: int 44
+declarator: identifier 49
+declarator: declarator [ digit ] 50
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer 55
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+initializer: assignment-expression 51
+initializer-list: initializer-list , initializer 54
+initializer: { initializer-list } 52
+init-declarator: declarator = initializer 48
+init-declarator-list: init-declarator 45
+declaration: declaration-specifiers init-declarator-list ; 43
+block-item: declaration 65
+block-item-list: block-item-list block-item 64
+declaration-specifiers: int 44
+declarator: identifier 49
+init-declarator: declarator 47
+init-declarator-list: init-declarator 45
+declarator: identifier 49
+init-declarator: declarator 47
+init-declarator-list: init-declarator-list , init-declarator 46
+declarator: identifier 49
+init-declarator: declarator 47
+init-declarator-list: init-declarator-list , init-declarator 46
+declarator: identifier 49
+init-declarator: declarator 47
+init-declarator-list: init-declarator-list , init-declarator 46
+declaration: declaration-specifiers init-declarator-list ; 43
+block-item: declaration 65
+block-item-list: block-item-list block-item 64
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: relational-expression < additive-expression 22
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+postfix-expression: postfix-expression ++ 7
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+postfix-expression: postfix-expression [ expression ] 6
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+postfix-expression: postfix-expression [ expression ] 6
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: multiplicative-expression * unary-expression 15
+additive-expression: additive-expression + multiplicative-expression 19
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item 63
+compound-statement: { block-item-list } 62
+statement: compound-statement 56
+iteration-statement: for ( expression ; expression ; expression ) statement 71
+statement: iteration-statement 59
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: equality-expression != relational-expression 28
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: additive-expression - multiplicative-expression 20
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+postfix-expression: postfix-expression [ expression ] 6
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: additive-expression + multiplicative-expression 19
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item 63
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+postfix-expression: postfix-expression -- 8
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+compound-statement: { block-item-list } 62
+statement: compound-statement 56
+iteration-statement: while ( expression ) statement 70
+statement: iteration-statement 59
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: multiplicative-expression / unary-expression 16
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: relational-expression >= additive-expression 25
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: additive-expression - multiplicative-expression 20
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item 63
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+printf-arg: assignment-expression 85
+printf-arg-list: printf-arg 83
+call-statement: printf ( string , printf-arg-list ) ; 77
+statement: call-statement 61
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+compound-statement: { block-item-list } 62
+statement: compound-statement 56
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+assignment-operator: = 35
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: additive-expression - multiplicative-expression 20
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+assignment-expression: unary-expression assignment-operator assignment-expression 34
+expression: assignment-expression 41
+expression-statement: expression ; 67
+statement: expression-statement 57
+block-item: statement 66
+block-item-list: block-item 63
+primary-expression: identifier 1
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+printf-arg: assignment-expression 85
+printf-arg-list: printf-arg 83
+call-statement: printf ( string , printf-arg-list ) ; 77
+statement: call-statement 61
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+compound-statement: { block-item-list } 62
+statement: compound-statement 56
+selection-statement: if ( expression ) statement else statement 69
+statement: selection-statement 58
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+constant: digit 4
+primary-expression: constant 2
+postfix-expression: primary-expression 5
+minus-expression: postfix-expression 9
+unary-expression: minus-expression 11
+multiplicative-expression: unary-expression 14
+additive-expression: multiplicative-expression 18
+relational-expression: additive-expression 21
+equality-expression: relational-expression 26
+logical-AND-expression: equality-expression 29
+logical-OR-expression: logical-AND-expression 31
+assignment-expression: logical-OR-expression 33
+expression: assignment-expression 41
+jump-statement: return expression ; 74
+statement: jump-statement 60
+block-item: statement 66
+block-item-list: block-item-list block-item 64
+compound-statement: { block-item-list } 62
+statement: compound-statement 56
+enter: int main ( ) statement 86

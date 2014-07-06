@@ -1,0 +1,88 @@
+postfix-expression: primary-expression 
+postfix-expression: postfix-expression [ expression ] 
+postfix-expression: postfix-expression ++ 
+postfix-expression: postfix-expression -- 
+enter: int main ( ) statement 
+enter: void main ( ) statement 
+init-declarator: declarator 
+init-declarator: declarator = initializer 
+initializer: assignment-expression 
+initializer: { initializer-list } 
+initializer: { initializer-list , } 
+scanf-arg-list: scanf-arg 
+scanf-arg-list: scanf-arg-list , scanf-arg 
+initializer-list: initializer-list , initializer 
+initializer-list: initializer 
+call-statement: scanf ( string , scanf-arg-list ) ; 
+call-statement: printf ( string , printf-arg-list ) ; 
+call-statement: printf ( string ) ; 
+additive-expression: multiplicative-expression 
+additive-expression: additive-expression + multiplicative-expression 
+additive-expression: additive-expression - multiplicative-expression 
+expression-statement: expression ; 
+declaration-specifiers: int 
+logical-OR-expression: logical-AND-expression 
+logical-OR-expression: logical-OR-expression || logical-AND-expression 
+unary-expression: minus-expression 
+unary-expression: ++ unary-expression 
+unary-expression: -- unary-expression 
+logical-AND-expression: equality-expression 
+logical-AND-expression: logical-AND-expression && equality-expression 
+Sprime: enter 
+statement: compound-statement 
+statement: expression-statement 
+statement: selection-statement 
+statement: iteration-statement 
+statement: jump-statement 
+statement: call-statement 
+constant: digit 
+assignment-expression: logical-OR-expression 
+assignment-expression: unary-expression assignment-operator assignment-expression 
+printf-arg-list: printf-arg 
+printf-arg-list: printf-arg-list , printf-arg 
+init-declarator-list: init-declarator 
+init-declarator-list: init-declarator-list , init-declarator 
+selection-statement: if ( expression ) statement 
+selection-statement: if ( expression ) statement else statement 
+declaration: declaration-specifiers init-declarator-list ; 
+relational-expression: additive-expression 
+relational-expression: relational-expression < additive-expression 
+relational-expression: relational-expression > additive-expression 
+relational-expression: relational-expression <= additive-expression 
+relational-expression: relational-expression >= additive-expression 
+equality-expression: relational-expression 
+equality-expression: equality-expression == relational-expression 
+equality-expression: equality-expression != relational-expression 
+compound-statement: { block-item-list } 
+block-item: declaration 
+block-item: statement 
+printf-arg: assignment-expression 
+jump-statement: continue ; 
+jump-statement: break ; 
+jump-statement: return expression ; 
+jump-statement: return ; 
+iteration-statement: while ( expression ) statement 
+iteration-statement: for ( expression ; expression ; expression ) statement 
+assignment-operator: = 
+assignment-operator: *= 
+assignment-operator: /= 
+assignment-operator: %= 
+assignment-operator: += 
+assignment-operator: -= 
+multiplicative-expression: unary-expression 
+multiplicative-expression: multiplicative-expression * unary-expression 
+multiplicative-expression: multiplicative-expression / unary-expression 
+multiplicative-expression: multiplicative-expression % unary-expression 
+minus-expression: postfix-expression 
+minus-expression: - postfix-expression 
+block-item-list: block-item 
+block-item-list: block-item-list block-item 
+primary-expression: identifier 
+primary-expression: constant 
+primary-expression: ( expression ) 
+expression: assignment-expression 
+expression: expression , assignment-expression 
+scanf-arg: & postfix-expression 
+scanf-arg: postfix-expression 
+declarator: identifier 
+declarator: declarator [ digit ] 

@@ -1,0 +1,88 @@
+primary-expression:identifier
+primary-expression:constant
+primary-expression:( expression )
+constant:digit
+postfix-expression:primary-expression
+postfix-expression:postfix-expression [ expression ]
+postfix-expression:postfix-expression ++
+postfix-expression:postfix-expression --
+minus-expression:postfix-expression
+minus-expression:- postfix-expression
+unary-expression:minus-expression
+unary-expression:++ unary-expression
+unary-expression:-- unary-expression
+multiplicative-expression:unary-expression
+multiplicative-expression:multiplicative-expression * unary-expression
+multiplicative-expression:multiplicative-expression / unary-expression
+multiplicative-expression:multiplicative-expression % unary-expression
+additive-expression:multiplicative-expression
+additive-expression:additive-expression + multiplicative-expression
+additive-expression:additive-expression - multiplicative-expression
+relational-expression:additive-expression
+relational-expression:relational-expression < additive-expression
+relational-expression:relational-expression > additive-expression
+relational-expression:relational-expression <= additive-expression
+relational-expression:relational-expression >= additive-expression
+equality-expression:relational-expression
+equality-expression:equality-expression == relational-expression
+equality-expression:equality-expression != relational-expression
+logical-AND-expression:equality-expression
+logical-AND-expression:logical-AND-expression && equality-expression
+logical-OR-expression:logical-AND-expression
+logical-OR-expression:logical-OR-expression || logical-AND-expression
+assignment-expression:logical-OR-expression
+assignment-expression:unary-expression assignment-operator assignment-expression
+assignment-operator:=
+assignment-operator:*=
+assignment-operator:/=
+assignment-operator:%=
+assignment-operator:+=
+assignment-operator:-=
+expression:assignment-expression
+expression:expression , assignment-expression
+declaration:declaration-specifiers init-declarator-list ;
+declaration-specifiers:int
+init-declarator-list:init-declarator
+init-declarator-list:init-declarator-list , init-declarator
+init-declarator:declarator
+init-declarator:declarator = initializer
+declarator:identifier
+declarator:declarator [ digit ]
+initializer:assignment-expression
+initializer:{ initializer-list }
+initializer:{ initializer-list , }
+initializer-list:initializer-list , initializer
+initializer-list:initializer
+statement:compound-statement
+statement:expression-statement
+statement:selection-statement
+statement:iteration-statement
+statement:jump-statement
+statement:call-statement
+compound-statement:{ block-item-list }
+block-item-list:block-item
+block-item-list:block-item-list block-item
+block-item:declaration
+block-item:statement
+expression-statement:expression ;
+selection-statement:if ( expression ) statement
+selection-statement:if ( expression ) statement else statement
+iteration-statement:while ( expression ) statement
+iteration-statement:for ( expression ; expression ; expression ) statement
+jump-statement:continue ;
+jump-statement:break ;
+jump-statement:return expression ;
+jump-statement:return ;
+call-statement:scanf ( string , scanf-arg-list ) ;
+call-statement:printf ( string , printf-arg-list ) ;
+call-statement:printf ( string ) ;
+scanf-arg-list:scanf-arg
+scanf-arg-list:scanf-arg-list , scanf-arg
+scanf-arg:& postfix-expression
+scanf-arg:postfix-expression
+printf-arg-list:printf-arg
+printf-arg-list:printf-arg-list , printf-arg
+printf-arg:assignment-expression
+enter:int main ( ) statement
+enter:void main ( ) statement
+Sprime:enter

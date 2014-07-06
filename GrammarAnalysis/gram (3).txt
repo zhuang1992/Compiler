@@ -1,0 +1,102 @@
+Sprime:S
+S:specifier identifier ( ) { block returnStatement }
+returnStatement:RETURN returnPara ;
+returnStatement:RETURN
+returnPara:NUM
+specifier:INT
+specifier:VOID
+block:blockStatement block
+block:blockStatement
+blockStatement:declaration
+blockStatement:<F>
+blockStatement:loopStatement
+blockStatement:selectionStatement
+blockStatement:printScan
+blockStatement:unaryExpression ;
+unaryExpression:identifier postfixExpression ++
+unaryExpression:identifier ++
+unaryExpression:identifier postfixExpression --
+unaryExpression:identifier --
+declaration:INT identifier postfixExpression <DF> <DS> ;
+declaration:INT identifier postfixExpression <DF> ;
+declaration:INT identifier <DF> <DS> ;
+declaration:INT identifier <DF> ;
+declaration:INT identifier postfixExpression <DS> ;
+declaration:INT identifier postfixExpression ;
+declaration:INT identifier <DS> ;
+declaration:INT identifier ;
+<F>:identifier postfixExpression <DF> ;
+<F>:identifier <DF> ;
+postfixExpression:[ identifier ]
+postfixExpression:[ NUM ]
+postfixExpression:[ mathExpression ]
+<DF>:= mathExpression
+<DF>:= { <NS> }
+<NS>:NUM
+<NS>:NUM numList
+numList:, NUM numList
+numList:, NUM
+<DS>:, identifier postfixExpression <DF> <DS>
+<DS>:, identifier <DF> <DS>
+<DS>:, identifier postfixExpression <DS>
+<DS>:, identifier <DS>
+<DS>:, identifier postfixExpression <DF>
+<DS>:, identifier <DF>
+<DS>:, identifier postfixExpression
+<DS>:, identifier
+mathExpression:mathUnit mathSecond mathFirst
+mathExpression:mathUnit mathSecond
+mathExpression:mathUnit mathFirst
+mathExpression:mathUnit
+mathFirst:+ mathExpression
+mathFirst:- mathExpression
+mathSecond:* mathUnit mathSecond
+mathSecond:/ mathUnit mathSecond
+mathSecond:* mathUnit
+mathSecond:/ mathUnit
+mathUnit:( mathExpression )
+mathUnit:NUM
+mathUnit:string
+mathUnit:identifier postfixExpression
+mathUnit:identifier
+loopStatement:<FORX>
+loopStatement:<WHILEX>
+<FORX>:FOR ( <FOD> <FOT> <FOF> ) { block }
+<FORX>:FOR ( <FOD> <FOT> ) { block }
+<FOD>:;
+<FOD>:<F>
+<FOT>:<T> ;
+<FOT>:;
+<FOF>:identifier postfixExpression = mathExpression
+<FOF>:identifier = mathExpression
+<FOF>:unaryExpression
+<T>:( mathExpression <GK> mathExpression <TS> )
+<T>:( mathExpression <GK> mathExpression )
+<T>:mathExpression <GK> mathExpression
+<TS>:&& <T>
+<TS>:|| <T>
+<GK>:!=
+<GK>:==
+<GK>:>=
+<GK>:<=
+<GK>:>
+<GK>:<
+<WHILEX>:WHILE <T> { block }
+selectionStatement:<IF> <IF_E>
+selectionStatement:<IF>
+<IF>:IF <T> { block }
+<IF_E>:<ELSE>
+<ELSE>:ELSE <ELSE_E>
+<ELSE_E>:<IF> <IF_E>
+<ELSE_E>:<IF>
+<ELSE_E>:{ block }
+printScan:PRINTF ( string , printParaList ) ;
+printScan:PRINTF ( string ) ;
+printScan:SCANF ( string , <SCLI> ) ;
+<SCLI>:<SCA>
+<SCLI>:<SCLI> , <SCA>
+<SCA>:& mathUnit
+<SCA>:mathUnit
+printParaList:<PRA>
+printParaList:printParaList , <PRA>
+<PRA>:mathExpression

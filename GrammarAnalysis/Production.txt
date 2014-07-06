@@ -1,0 +1,94 @@
+Sprime:<S>
+<S>:<R> IDEN ( ) { <B> <RET> }
+<RET>:RETURN <FH> ;
+<RET>:RETURN
+<FH>:NUM
+<R>:INT
+<R>:VOID
+<B>:<BS> <B>
+<B>:<BS>
+<BS>:<D>
+<BS>:<F>
+<BS>:<X>
+<BS>:<W>
+<BS>:<Y>
+<BS>:<Z> ;
+<Z>:IDEN <A> ++
+<Z>:IDEN ++
+<Z>:IDEN <A> --
+<Z>:IDEN --
+<D>:INT IDEN <A> <DF> <DS> ;
+<D>:INT IDEN <A> <DF> ;
+<D>:INT IDEN <DF> <DS> ;
+<D>:INT IDEN <DF> ;
+<D>:INT IDEN <A> <DS> ;
+<D>:INT IDEN <A> ;
+<D>:INT IDEN <DS> ;
+<D>:INT IDEN ;
+<A>:[ NUM ]
+<DF>:= <M>
+<DS>:, IDEN <A> <DF> <DS>
+<DS>:, IDEN <DF> <DS>
+<DS>:, IDEN <A> <DS>
+<DS>:, IDEN <DS>
+<DS>:, IDEN <A> <DF>
+<DS>:, IDEN <DF>
+<DS>:, IDEN <A>
+<DS>:, IDEN
+<F>:IDEN <A> = <M> ;
+<F>:IDEN = <M> ;
+<M>:<MC> <MS> <MF>
+<M>:<MC> <MS>
+<M>:<MC> <MF>
+<M>:<MC>
+<MF>:+ <M>
+<MF>:- <M>
+<MS>:* <MC> <MS>
+<MS>:/ <MC> <MS>
+<MS>:* <MC>
+<MS>:/ <MC>
+<MC>:( <M> )
+<MC>:NUM
+<MC>:STR
+<MC>:IDEN <A>
+<MC>:IDEN
+<X>:<FORX>
+<X>:<WHILEX>
+<FORX>:FOR ( <FOD> <FOT> <FOF> ) { <B> }
+<FORX>:FOR ( <FOD> <FOT> ) { <B> }
+<FOD>:;
+<FOD>:<M> ;
+<FOT>:<T> ;
+<FOT>:;
+<FOF>:IDEN <A> = <M>
+<FOF>:IDEN = <M>
+<FOF>:<Z>
+<T>:( <M> <GK> <M> <TS> )
+<T>:( <M> <GK> <M> )
+<TS>:&& <T>
+<TS>:|| <T>
+<GK>:!=
+<GK>:==
+<GK>:>=
+<GK>:<=
+<GK>:>
+<GK>:<
+<WHILEX>:WHILE <T> { <B> }
+<W>:<IF> <IF_E>
+<W>:<IF>
+<IF>:IF <T> { <B> }
+<IF_E>:<ELSE>
+<ELSE>:ELSE <ELSE_E>
+<ELSE_E>:<IF> <IF_E>
+<ELSE_E>:<IF>
+<ELSE_E>:{ <B> }
+<Y>:printf ( string , <PRLI> ) ;
+<Y>:print ( string ) ;
+<Y>:scanf ( string , <SCLI> ) ;
+<SCLI>:<SCA>
+<SCLI>:<SCLI> , <SCA>
+<SCA>:& <MC>
+<SCA>:<MC>
+<PRLI>:<PRA>
+<PRLI>:<PRLI> , <PRA>
+<PRA>:<M>
