@@ -139,9 +139,8 @@ public:
 	}
 	
 	char* genTextSection(){
-		char t[1024];
-		strcpy(t,".section .text\n.globl _main\n_main:\n\tpushl %ebp\n\tmovl %esp, %ebp\n");
-		return t;
+		strcpy(code,".section .text\n.globl _main\n_main:\n\tpushl %ebp\n\tmovl %esp, %ebp\n");
+		return code;
 	}
 	void genStr(char*str){
 		sprintf(codeLine[numLine],"L%d:	.ascii ",labelNum++);
@@ -156,21 +155,18 @@ public:
 		return code;
 	}
 	char* genInsAssign(int v,int v2){
-		char t[1024];
-		sprintf(t,"\tmovl $%d, %d(%%ebp)\n",v,-1*v2);
-		return t;
+		sprintf(code,"\tmovl $%d, %d(%%ebp)\n",v,-1*v2);
+		return code;
 	}
 	char* genAssign(int v){
-		char t[1024];
-		sprintf(t,"\tmovl %%eax, %d(%%ebp)\n",-1*v);
-		return t;
+		sprintf(code,"\tmovl %%eax, %d(%%ebp)\n",-1*v);
+		return code;
 	}
 	void conEsp(int v,SA* iA){
 		if(v==0)return;
-		char t[1024];
-		sprintf(t,"\tsubl $%d, %%esp\n",v);
+		sprintf(code,"\tsubl $%d, %%esp\n",v);
 		iA->code[iA->numLine]=new char[1024];
-		strcpy(iA->code[iA->numLine],t);
+		strcpy(iA->code[iA->numLine],code);
 		iA->numLine++;
 	}
 	void outputCode(SA* iA){
@@ -183,10 +179,9 @@ public:
 		iA->showAlready=true;
 	}
 	void genLable(SA* iA){
-		char t[1024];
-		sprintf(t,"L%d:\n",labelNum++);
+		sprintf(code,"L%d:\n",labelNum++);
 		iA->code[iA->numLine]=new char[1024];
-		strcpy(iA->code[iA->numLine],t);
+		strcpy(iA->code[iA->numLine],code);
 		iA->numLine++;
 	}
 	char* genCmp(int v1,int v2){
@@ -195,97 +190,84 @@ public:
 		return t;
 	}
 	char* genJmp(int type){
-		char t[1024];
 		if(type==0){
-			sprintf(t,"\tjge	L%d\n",labelNum+1);
+			sprintf(code,"\tjge	L%d\n",labelNum+1);
 		}else if(type==1){
-			sprintf(t,"\tje	L%d\n",labelNum+1);
+			sprintf(code,"\tje	L%d\n",labelNum+1);
 		}else if(type==2){
-			sprintf(t,"\tjl	L%d\n",labelNum);
+			sprintf(code,"\tjl	L%d\n",labelNum);
 		}else if(type==3){
-			sprintf(t,"\tjmp L%d\n",labelNum+1);
-		}
-		
-		
-		return t;
+			sprintf(code,"\tjmp L%d\n",labelNum+1);
+		}		
+		return code;
 	}
 	char* genIncDec(bool dir,int v){
-		char t[1024];
-		sprintf(t,"\tleal %d(%%ebp), %%eax\n",-1*v);
+		sprintf(code,"\tleal %d(%%ebp), %%eax\n",-1*v);
 		if(dir)
-			strcat(t,"\tincl (%eax)\n");
+			strcat(code,"\tincl (%eax)\n");
 		else 
-			strcat(t,"\tdecl (%eax)\n");
+			strcat(code,"\tdecl (%eax)\n");
 		char tt[100];
 		sprintf(tt,"\tjmp L%d\n",labelNum);
-		strcat(t,tt);
-		return t;
+		strcat(code,tt);
+		return code;
 	}
 	bool regF1;
 	bool regF2;
 	char* genIndex(int v2){
-		char t[1024];
 		if(regF1==0){
-			sprintf(t,"\tmovl %d(%%ebp), %%eax\n",-1*v2);
+			sprintf(code,"\tmovl %d(%%ebp), %%eax\n",-1*v2);
 		}else{
-			sprintf(t,"\tmovl %d(%%ebp), %%ebx\n",-1*v2);
+			sprintf(code,"\tmovl %d(%%ebp), %%ebx\n",-1*v2);
 		}
 		regF1=!regF1;
-		return t;
+		return code;
 	}
 	char* genOp(int v,int v2){
-		char t2[1024];
 		if(regF2==0){
-			sprintf(t2,"\tmovl %d(%%ebp,%%eax,4), %%eax\n",-1*v);
+			sprintf(code,"\tmovl %d(%%ebp,%%eax,4), %%eax\n",-1*v);
 		}			
 		else{
-			sprintf(t2,"\tmovl %d(%%ebp,%%ebx,4), %%ebx\n",-1*v);
+			sprintf(code,"\tmovl %d(%%ebp,%%ebx,4), %%ebx\n",-1*v);
 		}
 		regF2=!regF2;
-		return t2;
+		return code;
 	}
 	char* genMulti(){
-		char t[1024];
-		sprintf(t,"\timull %%ebx, %%eax\n");
-		return t;
+		sprintf(code,"\timull %%ebx, %%eax\n");
+		return code;
 	}
 	char* genDiv(int v1,int v2){
-		char t[1024];
-		sprintf(t,"\tmovl %d(%%ebp), %%eax\n\tcltd\n\tidivl %d(%%ebp)\n",-1*v1,-1*v2);
-		return t;
+		sprintf(code,"\tmovl %d(%%ebp), %%eax\n\tcltd\n\tidivl %d(%%ebp)\n",-1*v1,-1*v2);
+		return code;
 	}
 	char* genAdd(int v1){
-		char t[1024];
-		sprintf(t,"\taddl %d(%%ebp), %%eax\n",-1*v1);
-		return t;
+		sprintf(code,"\taddl %d(%%ebp), %%eax\n",-1*v1);
+		return code;
 	}
 	char* genMinus(int v,int v1,int type){
-		char t[1024];
 		char t2[1024];
 		if(type==0){
-			sprintf(t,"\tmovl %d(%%ebp), %%eax\n",-1*v);
+			sprintf(code,"\tmovl %d(%%ebp), %%eax\n",-1*v);
 			sprintf(t2,"\tsubl $%d, %%eax\n",v1);
 		}else{
-			sprintf(t,"\tmovl $%d, %%eax\n",v1);
+			sprintf(code,"\tmovl $%d, %%eax\n",v1);
 			sprintf(t2,"\tsubl %d(%%ebp), %%eax\n",-1*v);
 		}		
-		strcat(t,t2);
-		return t;
+		strcat(code,t2);
+		return code;
 	}
 	char* genPrintf(int v){
-		char t[1024];
-		sprintf(t,"\tmovl %d(%%ebp), %%eax\n\tpushl %%eax\n\tpushl $L%d\n\t\call _printf\n",-1*v,slabelNum-1);
-		return t;
+		sprintf(code,"\tmovl %d(%%ebp), %%eax\n\tpushl %%eax\n\tpushl $L%d\n\t\call _printf\n",-1*v,slabelNum-1);
+		return code;
 	}
 	char* genPrintString(){
-		char t[1024];
-		sprintf(t,"\tpushl $L%d\n\t\call _printf\n",slabelNum-1);
-		return t;
+		sprintf(code,"\tpushl $L%d\n\t\call _printf\n",slabelNum-1);
+		return code;
 	}
 	char* genRet(int v){
-		char t[1024];
-		sprintf(t,"\tmovl $%d, %%eax\n\tleave\n\tret\n",v);
-		return t;
+		sprintf(code,"\tmovl $%d, %%eax\n\tleave\n\tret\n",v);
+		return code;
 	}
 	
 }codeGen;

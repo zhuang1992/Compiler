@@ -16,6 +16,8 @@
 *.sdf
 *.suo
 *.sln
+*.vcxproj
+*.vcxproj.filters
 Debug
 
 # Standard to msysgit
